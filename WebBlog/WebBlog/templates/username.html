@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    
+    {{ moment.include_moment() }}
+    <h1>Hello, {{ name|safe }}</h1> <!--loc khi bien chua gia tri la an toan-->
+    <p>The local date and time is {{ moment(current_time).format('LLL') }}.</p>
+    <p>That was {{ moment(current_time).fromNow(refresh=True) }}</p>
+</body>
+</html>
